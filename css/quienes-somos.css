@@ -1,0 +1,424 @@
+/* General Styles */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --accent-color: #ff6b6b;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Cormorant Garamond', serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.section-divider {
+    width: 100px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 20px auto;
+    border: none;
+}
+
+/* About Hero Section */
+
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-hero .lead {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* About Content Section */
+.about-content {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+.team-members {
+    margin-top: 50px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.05);
+}
+
+.team-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 86, 179, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-social {
+    bottom: 0;
+}
+
+.team-social a {
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.team-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.position {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bio {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Values Section */
+.values-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background: var(--dark-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.value-card p {
+    color: #666;
+}
+
+/* Clients Section */
+.clients-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.clients-subtitle {
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.client-logo {
+    max-height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    padding: 15px;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('../img/cta-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.btn-lg {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .about-hero .lead {
+        font-size: 1.3rem;
+    }
+    
+    .team-img-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .about-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .team-card {
+        margin-bottom: 30px;
+    }
+    
+    .client-logo {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .team-info {
+        padding: 20px 15px;
+    }
+    
+    .team-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Header Transparente Específico para Quiénes Somos */
+.transparent-navbar {
+    background-color: rgba(0, 42, 82, 0.7) !important; /* 70% de transparencia */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s ease;
+}
+
+.transparent-navbar.scrolled {
+    background-color: rgba(0, 42, 82, 0.85) !important;
+}
+
+.transparent-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 0.92rem;
+    letter-spacing: 0.8px;
+    padding: 0.5rem 0.9rem !important;
+    margin: 0 0.15rem;
+}
+
+.transparent-navbar .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.transparent-navbar .nav-link.active::after {
+    width: 80% !important;
+    background-color: var(--accent-color);
+}
+
+.transparent-navbar .dropdown-menu {
+    background-color: rgba(0, 42, 82, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Ajuste especial para el hero de Quiénes Somos */
+.about-hero {
+    padding-top: 120px; /* Asegura espacio para el header transparente */
+}
+
+/* seccion  principal quienes somos*/
+.about-hero {
+    background-image: url('../img/Equipo-1.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    padding: 100px 0; /* Ajusta el espacio superior e inferior */
+    color: white; /* Asegura que el texto sea visible */
+}
+
+.about-hero .container {
+    position: relative; /* Para que el contenido se vea bien sobre la imagen */
+    z-index: 1;
+}
+
+.about-hero h1,
+.about-hero .lead {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Agrega sombra para mejorar la visibilidad del texto */
+}
+
+/* Media Queries para hacer la imagen responsiva */
+@media (max-width: 1200px) {
+    .about-hero {
+        padding: 80px 0; /* Ajusta el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 60px 0; /* Ajusta el padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 40px 0; /* Ajusta el padding en pantallas pequeñas */
+    }
+}
